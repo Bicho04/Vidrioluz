@@ -1,0 +1,109 @@
+//	Typography
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 300
+  font-family: $font-family
+  color: $color-accent
+
+h1
+  font-size: 2rem
+  text-transform: uppercase
+
+h2
+  font-size: 1.6rem
+  text-transform: uppercase
+
+h3
+  font-size: 1rem
+  color: $color-text
+  font-weight: 600
+
+h4
+  font-size: 1rem
+  color: lighten($color-text,30)
+  font-weight: 400
+p
+  margin: 0 0 20px 0
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+hr
+  border: solid #ddd
+  border-width: 1px 0 0
+  clear: both
+  margin: 10px 0 30px
+  height: 0
+  width: 100%
+  flex-shrink: 100%
+hr.top,
+hr.bottom
+  border: none
+  margin: 0
+  background:
+    image: url("../img/bg-hr.png")
+    size: 100% 200%
+    position: 0 0
+    repeat: no-repeat
+  height: 1em 
+  border: none
+  display: block
+  width: 100%
+  max-width: 1024px
+
+hr.bottom
+    background:
+      position: 0 100%
+      size: 100% 210%
+
+
+
+// Links
+
+a
+  color: $color-link
+  text-decoration: none
+  outline: 0    
+
+a:hover, a:focus
+  color: lighten($color-link, 20%)
+  text-decoration: underline
+
+
+
+// Selection colors (easy to forget)
+
+::selection
+  background: $color-selection
+
+::-moz-selection
+  background: $color-selection
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+body
+  -webkit-tap-highlight-color: $color-selection
+
+
+
+// Basic Styles
+
+html,
+body
+  min-height: 100vh
+
+body
+  // background: $color-bg
+  font-size: 16px
+  line-height: 1.6
+  font-family: $font-family
+  color: $color-text
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%

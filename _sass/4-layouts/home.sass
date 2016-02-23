@@ -1,0 +1,91 @@
+body
+  font-family: $font-family
+  font-size: 14px
+.wrapper
+  display: block
+  margin: 0 auto
+  min-height: 100vh
+  width: 100%
+  padding: 0
+  max-width: 1024px
+  overflow: hidden
+  // display: flex
+  // flex-direction: column
+  // justify-content: space-between
+
+
+header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding-top: 3em
+  padding-bottom: 1.5em
+
+  nav.header-menu
+    width: 60%
+    margin: 0
+    ul.navegador
+      margin: 0
+      padding: 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+      list-style: none
+      li
+       white-space: nowrap
+      a 
+        display: block
+        color: lighten($color-text,40)
+        font-weight: 400
+        box-sizing: border-box
+        border-top: 1px solid transparent
+        border-bottom: 1px solid transparent
+        transition: border-color 0.4s
+        &:hover
+          text-decoration: none
+          border-color: lighten($color-text,40)
+          color: lighten($color-text,30)
+
+
+section.slide
+  figure.picture
+    margin: 0
+    position: relative
+    max-height: 400px
+    img
+      width: 100%
+    h3
+      position: absolute
+      bottom: 0
+      text-align: center
+      width: 70%
+      left: 50%
+      line-height: 1.2em
+      margin-left: -(70% / 2)
+      font-size: 3em
+      font-weight: 300
+      color: #fff
+
+
+footer.footer
+  .contactos
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  a
+    font-size: 1rem
+    color: lighten($color-text,30)
+    font-weight: 400
+    color: $color-text
+    span
+      font-size: 1.3em
+    &:before
+      margin: 0 2em
+      content:'/'
+      // display: none
+  h4.fincreativo
+    text-align: center
+
+
+

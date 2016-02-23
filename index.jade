@@ -1,0 +1,35 @@
+extends _layout/default
+
+block title
+	title Vidrio Luz
+	meta(name='description', content='#####')
+
+block body
+	hr.top
+	header
+		a(href="#").header-Logo
+			img(src="assets/img/logo-vidrioluz.png", alt="")
+		nav.header-menu
+			ul.navegador
+				li: a(href="#") INICIO
+				li: a(href="#") LA EMPRESA
+				li: a(href="#") PRODUCTOS
+				li: a(href="#") OBRAS
+				li: a(href="#") PRESUPUESTO
+				li: a(href="#") CONTACTENOS
+	section.slide
+		figure.picture
+			img(src="http://loremflickr.com/1024/400/glass", alt="")
+			h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+	footer.footer
+		.contactos
+			h4.direccion vidrioluzMédicos del Chaco 2713 c/ M. Mallorquín. Asunción, Paraguay. +595 21 
+				strong 562 754,  554 998
+			a(href="#")
+				span.fa.fa-facebook-square  
+				|  vidrioluz
+		hr.bottom
+		h4.fincreativo Desarrollado por 
+			strong FINCREATIVO
+	
+	aside
