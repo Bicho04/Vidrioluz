@@ -1,6 +1,6 @@
 body
   font-family: $font-family
-  font-size: 14px
+  font-size: 12px
 .wrapper
   display: block
   margin: 0 auto
@@ -16,76 +16,206 @@ body
 
 header
   display: flex
-  flex-direction: row
-  justify-content: space-between
-  padding-top: 3em
-  padding-bottom: 1.5em
+  flex-direction: column
+  position: relative
+  // background: gold
+  @include media($large-screen) 
+    align-items: center
+    flex-direction: row
+    justify-content: space-between
+  a.header-Logo
+    padding: 2em 
+    position: relative
+    top: 1em
+    @include media($large-screen)
+      padding: 1em
+    img
+      display: block
 
   nav.header-menu
-    width: 60%
-    margin: 0
+    width: 100%
+    @include media($large-screen)
+      width: 50%
+
     ul.navegador
+      // align-items: space-between
+      display: flex
+      flex-direction: column
+      // justify-content: space-between
+      list-style: none
       margin: 0
       padding: 0
-      display: flex
-      justify-content: space-between
-      align-items: center
-      list-style: none
+      width: 100%
+      @include media($large-screen) 
+        padding: 3em 0
+        flex-direction: row
+        justify-content: flex-end
+        // background: red
+
       li
-       white-space: nowrap
+        background: lighten($color-text,75)
+        margin: 0
+        white-space: nowrap
+        text-align: left
+        width: 100%
+        padding: 0 2em
+        margin-right: 0
+        margin-left: auto
+        @include media($large-screen) 
+          background: transparent
+          padding: 0 0.8em
+          width: inherit
       a 
-        display: block
-        color: lighten($color-text,40)
-        font-weight: 400
         box-sizing: border-box
-        border-top: 1px solid transparent
-        border-bottom: 1px solid transparent
+        color: lighten($color-text,12)
+        display: block
+        font-weight: 600
+        line-height: 3em
         transition: border-color 0.4s
+        @include media($large-screen) 
+          border-bottom: 1px solid transparent
+          border-top: 1px solid transparent
+          line-height: 2em
+          padding-top: 0.2em
         &:hover
+          border-color: lighten($color-text,20)
+          // color: lighten($color-text,30)
           text-decoration: none
-          border-color: lighten($color-text,40)
-          color: lighten($color-text,30)
+
+  .nav-toggle
+    position: absolute
+    top: 1.8em
+    color: $color-text
+    text-decoration: none
+    font-size: 1.5em
+    right: 0
+    padding: 0.5em 1em
+    background: lighten($color-text,75)
 
 
 section.slide
-  figure.picture
-    margin: 0
+  $bd-size: 0.4em
+  $bd-box: 200px
+  $bd-vertical: -$bd-box/1.6
+  $bd-horizontal: -$bd-box/2
+  position: relative
+  overflow: hidden
+  box-sizing: border-box
+  .pictures
+
+  .slide-navs
+    position: absolute
+    top: 0
+    right: 0.5em
+    font-size: 3em
+    z-index: 6
+    .slide_nav
+      color: #fff
+      display: block
+      padding: 0.2em
+      display: inline
+      margin: 0 0.2em
+      line-height: 0.5em
+      &:hover,&:focus
+        text-decoration: none
+        color: #ddd
+
+
+  .picture
+    border-bottom: $bd-size solid $color-primary
+    height: 400px
     position: relative
-    max-height: 400px
+
     img
+      display: block
       width: 100%
+      height: 100%
+
     h3
-      position: absolute
+      $h3-widrh: 100%
       bottom: 0
-      text-align: center
-      width: 70%
+      color: #fff
+      font-size: 1.8em
+      font-weight: 300
       left: 50%
       line-height: 1.2em
-      margin-left: -(70% / 2)
-      font-size: 3em
-      font-weight: 300
-      color: #fff
+      margin-left: -($h3-widrh / 2)
+      position: absolute
+      text-align: center
+      text-shadow: 0 1px 2px darken($color-text,20)
+      width: $h3-widrh
+
+      @include media($small-screen) 
+        font-size: 2.2em
+        width: $h3-widrh*0.7
+        margin-left: -($h3-widrh*0.7 / 2)
+
+      @include media($large-screen) 
+        font-size: 2.8em
+
+
+  @include media($small-screen) 
+    &:after,
+    &:before
+      background: #fff
+      box-sizing: border-box
+      content: ''
+      height: $bd-box
+      position: absolute
+      transform: rotate(-35deg)
+      width: $bd-box
+      z-index: 5
+    &:before
+      top: $bd-vertical
+      left: $bd-horizontal
+
+    &:after
+      bottom: $bd-vertical
+      right: $bd-horizontal
+      border-top: $bd-size solid $color-primary
 
 
 footer.footer
   .contactos
-    width: 100%
-    display: flex
-    justify-content: flex-end
     align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    width: 100%
+    margin: 1em 0
+    text-align: center
+    @include media($large-screen) 
+      text-align: left
+      flex-direction: row
+  span,h4
+    font-size: 0.9rem
+    margin: 0
+    padding: 1em 0
+    line-height: 1em
   a
+    color: lighten($color-text,15)
     font-size: 1rem
-    color: lighten($color-text,30)
     font-weight: 400
-    color: $color-text
+    min-width: 200px
+    text-align: center
+    @include media($large-screen) 
+      text-align: left
+      margin-bottom: 0
+    &:hover
+      text-decoration: none
+      span
+        color: $color-facebook
     span
       font-size: 1.3em
+      display: inline
     &:before
-      margin: 0 2em
+      margin: 0 1em
       content:'/'
-      // display: none
+      display: inline
   h4.fincreativo
     text-align: center
+    line-height: 1.2em
+    // margin: 0
 
 
 

@@ -1,7 +1,10 @@
+mixin menu-boton(link, name)
+	li: a(href="#{link}") #{name}
+
 extends _layout/default
 
 block title
-	title Vidrio Luz
+	title Inicio - VidrioLuz
 	meta(name='description', content='#####')
 
 block body
@@ -11,23 +14,35 @@ block body
 			img(src="assets/img/logo-vidrioluz.png", alt="")
 		nav.header-menu
 			ul.navegador
-				li: a(href="#") INICIO
-				li: a(href="#") LA EMPRESA
-				li: a(href="#") PRODUCTOS
-				li: a(href="#") OBRAS
-				li: a(href="#") PRESUPUESTO
-				li: a(href="#") CONTACTENOS
+				+menu-boton('#','INICIO')
+				+menu-boton('#','LA EMPRESA')
+				+menu-boton('#','PRODUCTOS')
+				+menu-boton('#','OBRAS')
+				+menu-boton('#','PRESUPUESTO')
+				+menu-boton('#','CONTACTENOS')
 	section.slide
-		figure.picture
-			img(src="http://loremflickr.com/1024/400/glass", alt="")
-			h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+		.pictures
+			.picture
+				img(src="http://loremflickr.com/1024/400/glass?random=1", alt="")
+				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+			.picture
+				img(src="http://loremflickr.com/1024/400/glass?random=2", alt="")
+				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+			.picture
+				img(src="http://loremflickr.com/1024/400/glass?random=3", alt="")
+				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+			.picture
+				img(src="http://loremflickr.com/1024/400/glass?random=4", alt="")
+				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+		.slide-navs
 	footer.footer
 		.contactos
-			h4.direccion vidrioluzMédicos del Chaco 2713 c/ M. Mallorquín. Asunción, Paraguay. +595 21 
+			h4.direccion Médicos del Chaco 2713 c/ M. Mallorquín. Asunción, Paraguay. 
+			span +595 21 
 				strong 562 754,  554 998
-			a(href="#")
-				span.fa.fa-facebook-square  
-				|  vidrioluz
+				a(href="#")
+					span.fa.fa-facebook-square  
+					|  vidrioluz
 		hr.bottom
 		h4.fincreativo Desarrollado por 
 			strong FINCREATIVO
