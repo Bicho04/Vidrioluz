@@ -1,6 +1,17 @@
 mixin menu-boton(link, name)
 	li: a(href="#{link}") #{name}
 
+mixin picture(img, h3)
+	.picture
+		img(src="http://loremflickr.com/1024/400/glass?random=#{img}", alt="Vidrioluz - #{link}")
+		h3 #{h3}
+
+mixin vidrio(img, h3)
+	a.vidrio.folder
+		figure
+			img(src="http://loremflickr.com/200/100/glass?random=#{img}", alt="Vidrioluz - #{h3}")
+		h3 #{h3}
+
 extends _layout/default
 
 block title
@@ -22,29 +33,67 @@ block body
 				+menu-boton('#','CONTACTENOS')
 	section.slide
 		.pictures
-			.picture
-				img(src="http://loremflickr.com/1024/400/glass?random=1", alt="")
-				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
-			.picture
-				img(src="http://loremflickr.com/1024/400/glass?random=2", alt="")
-				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
-			.picture
-				img(src="http://loremflickr.com/1024/400/glass?random=3", alt="")
-				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
-			.picture
-				img(src="http://loremflickr.com/1024/400/glass?random=4", alt="")
-				h3 IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA
+			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			+picture('2','UNA TENDENCIA MODERNA Y VISIONARIA')
+			+picture('3','MODERNA Y VISIONARIA')
+			+picture('4','ENDENCIA MODERNA Y VISIONARIA')
 		.slide-navs
+
+	section.vidrios
+		h2 Vidrios
+		section.folders
+			+vidrio('1','Templados')
+			+vidrio('2','Laminados')
+			+vidrio('3','Floats')
+			+vidrio('4','Espejos')
+			+vidrio('5','Reflectivos')
+			+vidrio('6','Dreamglass')
+			+vidrio('7','Profilit')
+			+vidrio('8','Extra Claro')
+
+	section.vidrios-vidrio
+		article.cont-textImg
+			header
+				h2 Vidrios Templados
+				a(href="#") « VOLVER A PRODUCTOS
+			.content
+				.text
+					h4 Procesamiento:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. Vestibulum sodales augue sed vulputate fermentum. Donec finibus purus nec sapien iaculis, nec venenatis tellus suscipit. Pellentesque eu sapien ligula. Duis lectus urna, feugiat eget dolor at, interdum porttitor felis.
+
+					h4 Características:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. Vestibulum sodales augue sed vulputate fermentum.
+
+					h4 Resistencia y Seguridad:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. 
+
+					h4 Aplicaciones:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. Vestibulum sodales augue sed vulputate fermentum. Donec finibus purus nec sapien iaculis, nec venenatis tellus suscipit. Pellentesque eu sapien ligula. Duis lectus urna, feugiat eget dolor at, interdum porttitor felis. Donec ac risus lacus. Nullam ac pellentesque nulla. Praesent metus elit, porttitor eget quam tempus, rutrum sollicitudin turpis.
+				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+
+	section.historia
+		article.cont-text
+			h2 Historia
+			p Corría el año 1984, cuando los hermanos Julio y Vicente Aquino tuvieron una visión y decidieron arriesgarse a emprender un pequeño negocio en el Barrio Recoleta de la Ciudad de Asunción.
+
+			p Con  los años, la apuesta al trabajo bien hecho, con calma y a la vez con entusiasmo, VIDRIO LUZ llegó a convertirse en una de las primeras Importadoras y Distribuidoras de Vidrios en el Paraguay.
+
+			p En una época en la que este material era de escaso uso en el país, VIDRIOLUZ comenzó a abrir puertas y ventanas dejando entrar la Luz a los hogares asuncenos, imponiendo una tendencia moderna y visionaria, de mirar más allá, a través del Vidrio.
+
+			p Hoy en día, el Vidrio es uno de los principales componentes de toda obra moderna, en edificios de gran porte o en pequeñas viviendas, en revestimientos de muebles y paredes, y en otras múltiples aplicaciones  que la creatividad de los profesionales ha conseguido posicionar en nuestro mercado.
+
+			p Vimos un futuro mejor y nos enfocamos en él, hoy el mundo se volvió más dinámico, cada vez los materiales son más diversos, competitivos y cambiantes,  por eso nos renovamos, para nuestros clientes, llegando cada vez más lejos y ofreciendo un mejor servicio.
+
+			p Los años han pasado, la gente también, el Paraguay cambió y lo va a seguir haciendo, y así como aquel entonces, VIDRIOLUZ ESTÁ! Para brindarte soluciones y hacer que tu obra, cada día, sea más impecable. 
+
 	footer.footer
 		.contactos
 			h4.direccion Médicos del Chaco 2713 c/ M. Mallorquín. Asunción, Paraguay. 
 			span +595 21 
 				strong 562 754,  554 998
-				a(href="#")
+				a.facebook(href="https://www.facebook.com/Vidrioluz-220481667996302/?ref=br_rs" target='_blank')
 					span.fa.fa-facebook-square  
 					|  vidrioluz
 		hr.bottom
 		h4.fincreativo Desarrollado por 
-			strong FINCREATIVO
-	
-	aside
+			a(href="http://fincreativo.com/" target='_blank') FINCREATIVO
