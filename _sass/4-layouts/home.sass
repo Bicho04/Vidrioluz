@@ -31,6 +31,9 @@ body
   color: darken($color-text,30)
   margin-bottom: 4em
   font-size: 1em
+  header
+    max-width: 800px
+    margin: 0 auto
   h2
     padding: 0
   h4
@@ -44,36 +47,40 @@ body
     max-width: 800px
     margin: 0 auto 3em
 
-    figure 
-      margin: 0 
-      position: relative
-      width: 300px
-      height: 350px
-      &:after
-        content: ''
-        position: absolute
-        right: 0
-        bottom: 0
-        border-top: 0 solid transparent
-        border-right: 0 solid transparent
-        border-bottom: 20px solid #fff
-        border-left: 20px solid transparent
-      &:before
-        content: ''
-        position: absolute
-        left: 0
-        top: 0
-        border-top: 20px solid #fff
-        border-right: 20px solid transparent
-        border-bottom: 0 solid transparent
-        border-left: 0 solid transparent
-      img
-        display: block
-        width: 300px
-        height: 100%
-        background: lighten($color-text,75)
+figure 
+  margin: 0 
+  position: relative
+  width: 320px
+  height: 400px
+  margin-left: 1em
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 0
+    border-top: 0 solid transparent
+    border-right: 0 solid transparent
+    border-bottom: 40px solid #fff
+    border-left: 40px solid transparent
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    border-top: 40px solid #fff
+    border-right: 40px solid transparent
+    border-bottom: 0 solid transparent
+    border-left: 0 solid transparent
+  img
+    display: block
+    width: 320px
+    height: 100%
+    background: lighten($color-text,75)
 
 
+.js .nav-collapse
+  @include media($large-screen)
+    overflow: inherit
 header
   display: flex
   flex-direction: column
@@ -86,19 +93,18 @@ header
   a.header-Logo
     padding: 2em 
     position: relative
-    top: 1em
+    top: 0.25em
     @include media($large-screen)
       padding: 1em
     img
       display: block
-
   nav.header-menu
     width: 100%
     @include media($large-screen)
       width: 50%
 
     ul.navegador
-      // align-items: space-between
+      align-items: space-between
       display: flex
       flex-direction: column
       // justify-content: space-between
@@ -116,9 +122,8 @@ header
         background: lighten($color-text,75)
         margin: 0
         white-space: nowrap
-        text-align: left
+        text-align: center
         width: 100%
-        padding: 0 2em
         margin-right: 0
         margin-left: auto
         @include media($large-screen) 
@@ -177,6 +182,8 @@ section.slide
       display: inline
       margin: 0 0.2em
       line-height: 0.5em
+      &:after
+        content: '\f104'
       &:hover,&:focus
         text-decoration: none
         color: #ddd
@@ -244,9 +251,11 @@ section.slide
 
 
 section.folders
+  margin: 0 1em
   display: flex
   flex-wrap: wrap
-  justify-content: space-around
+  justify-content: space-between
+  // background: gold
   .folder
     position: relative
     margin: 0 1em 5em
@@ -284,6 +293,7 @@ section.folders
       font-weight: 300
       margin: 0
       width: 70%
+      line-height: 1.7em
       padding: 0 0.8em
       position: relative
       &:after
@@ -317,13 +327,13 @@ footer.footer
       text-align: left
       flex-direction: row
   span,h4
-    font-size: 0.9rem
+    font-size: 0.8rem
     margin: 0
     padding: 0.5em 0
     line-height: 1em
   a.facebook
     color: $color-text
-    font-size: 1rem
+    font-size: 0.8rem
     font-weight: 400
     min-width: 200px
     text-align: center
