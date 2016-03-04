@@ -3,13 +3,13 @@
 .nav-collapse ul {
   margin: 0;
   padding: 0;
-  // width: 100%;
+  width: 100%;
   display: block;
   list-style: none;
 }
 
 .nav-collapse li {
-  // width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -36,7 +36,7 @@
   user-select: none;
 }
 
-@media screen and (min-width: $small-screen) {
+@media screen and (min-width: $large-screen) {
   .js .nav-collapse {
     position: relative;
   }

@@ -1,6 +1,6 @@
 body
   font-family: $font-family
-  font-size: 12px
+  font-size: 16px
 .wrapper
   display: block
   margin: 0 auto
@@ -18,7 +18,7 @@ body
 
 .cont-text
   max-width: 650px
-  width: 95%
+  width: 90%
   margin: 0 auto
   color: darken($color-text,30)
   margin-bottom: 4em
@@ -26,7 +26,7 @@ body
     padding: 0
 
 .cont-textImg
-  width: 95%
+  width: 90%
   margin: 0 auto
   color: darken($color-text,30)
   margin-bottom: 4em
@@ -36,16 +36,39 @@ body
     margin: 0 auto
   h2
     padding: 0
+  .atras
+    &:hover
+      text-decoration:  none
+      color: invert($color-primary)
   h4
     color: darken($color-text,40)
-    font-weight: 600
-    margin: 0
     font-size: 1.2em
+    font-weight: 600
     line-height: 1.2em
+    margin: 0
   .content
-    display: flex
     max-width: 800px
     margin: 0 auto 3em
+    @include media($large-screen) 
+      display: flex
+      flex-direction: row
+    .text
+      @include media($large-screen)
+        width: 60%
+    figure
+      max-width:  320px
+      width: 100% 
+      overflow: hidden
+      margin: 1em auto 2em
+      @include media($small-screen)
+        float: right 
+        margin-bottom:  0.5em
+      @include media($large-screen)
+        order: 1
+        width: 320px  
+        float: none
+    @include media($large-screen) 
+        flex-direction: row
 
 figure 
   margin: 0 
@@ -128,7 +151,7 @@ header
         margin-left: auto
         @include media($large-screen) 
           background: transparent
-          padding: 0 0.8em
+          padding: 0 1.2em
           width: inherit
       a 
         box-sizing: border-box
@@ -149,12 +172,12 @@ header
 
   .nav-toggle
     position: absolute
-    top: 1.8em
+    top: 1.2em
     color: $color-text
     text-decoration: none
-    font-size: 1.5em
+    font-size: 2.5em
     right: 0
-    padding: 0.5em 1em
+    padding: 0 1em
     background: lighten($color-text,75)
 
 
@@ -166,6 +189,10 @@ section.slide
   position: relative
   overflow: hidden
   box-sizing: border-box
+  max-width: 90%  
+  margin: 0 auto
+  @include media($large-screen) 
+      max-width: 100%
   .pictures
     height: 400px
     overflow: hidden
@@ -183,11 +210,19 @@ section.slide
       margin: 0 0.2em
       line-height: 0.5em
       &:after
-        content: '\f104'
+        font: normal normal normal 14px/1 FontAwesome
+        font-size: inherit
+        text-rendering: auto
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
       &:hover,&:focus
         text-decoration: none
         color: #ddd
-
+      &.prev:after
+        content: ''
+      &.next:after
+        content: ''
 
   .picture
     border-bottom: $bd-size solid $color-primary
@@ -251,10 +286,12 @@ section.slide
 
 
 section.folders
-  margin: 0 1em
+  margin: 0 auto
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
+  justify-content: space-around
+  @include media($small-screen) 
+    justify-content: space-around
   // background: gold
   .folder
     position: relative
@@ -326,11 +363,13 @@ footer.footer
     @include media($large-screen) 
       text-align: left
       flex-direction: row
-  span,h4
+  span.telefono,h4
     font-size: 0.8rem
     margin: 0
     padding: 0.5em 0
     line-height: 1em
+    @include media($large-screen)
+      margin-left:0.7em 
   a.facebook
     color: $color-text
     font-size: 0.8rem
@@ -353,7 +392,7 @@ footer.footer
       display: inline
   h4.fincreativo
     text-align: center
-    line-height: 1.2em
+    line-height: 2.5em
     // margin: 0
     a 
       font-weight: 600
