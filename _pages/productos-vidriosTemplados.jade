@@ -1,0 +1,33 @@
+extends ../_layout/default
+
+block title
+	title Inicio - La empresa
+	meta(name='description', content='#####')
+
+block body
+	//- include ../_pages/laEmpresa-historia
+
+	section.slide.slide-small
+		.pictures
+			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+
+	section.vidrios-vidrio
+		article.cont-textImg
+			header
+				h2 Vidrios Templados
+				a.atras(href="#") « VOLVER A PRODUCTOS
+			.content
+				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				.text
+					h4 Procesamiento:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. Vestibulum sodales augue sed vulputate fermentum. Donec finibus purus nec sapien iaculis, nec venenatis tellus suscipit. Pellentesque eu sapien ligula. Duis lectus urna, feugiat eget dolor at, interdum porttitor felis.
+
+					h4 Características:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. Vestibulum sodales augue sed vulputate fermentum.
+
+					h4 Resistencia y Seguridad:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. 
+
+					h4 Aplicaciones:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nisi, eleifend id varius et, scelerisque auctor magna. Vestibulum sodales augue sed vulputate fermentum. Donec finibus purus nec sapien iaculis, nec venenatis tellus suscipit. Pellentesque eu sapien ligula. Duis lectus urna, feugiat eget dolor at, interdum porttitor felis. Donec ac risus lacus. Nullam ac pellentesque nulla. Praesent metus elit, porttitor eget quam tempus, rutrum sollicitudin turpis.
+

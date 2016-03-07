@@ -1,0 +1,23 @@
+
+mixin vidrio(img, h3)
+	a.vidrio.folder
+		figure
+			img(src="http://loremflickr.com/200/100/glass?random=#{img}", alt="Vidrioluz - #{h3}")
+		h3 #{h3}
+
+section.slide.slide-small
+	.pictures
+		+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+
+section.vidrios
+	h2 Vidrios
+	section.folders
+		+vidrio('1','Templados')
+		+vidrio('2','Laminados')
+		+vidrio('3','Floats')
+		+vidrio('4','Espejos')
+		+vidrio('5','Reflectivos')
+		+vidrio('6','Dreamglass')
+		+vidrio('7','Profilit')
+		+vidrio('8','Extra Claro')
+

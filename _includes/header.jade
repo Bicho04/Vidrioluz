@@ -1,0 +1,43 @@
+mixin menu-boton(link, name)
+	li
+		a(href="#{link}.html") #{name}
+		block
+
+hr.top
+header
+	a(href="#").header-Logo
+		img(src="assets/img/logo-vidrioluz.png", alt="")
+	nav.header-menu
+		ul.nav
+			+menu-boton('index','INICIO')
+			+menu-boton('laEmpresa','LA EMPRESA')
+				ul.sub-nav
+					+menu-boton('laEmpresa-Vidrioluz','Vidrioluz')
+					+menu-boton('laEmpresa-historia','Historia')
+					+menu-boton('laEmpresa-misionVision','Misión-Visión')
+					+menu-boton('laEmpresa-grupoHumano','Grupo humano')
+						ul.subsub-nav
+							+menu-boton('laEmpresa-grupoHumano-colaboradores','Colaboradores')
+							+menu-boton('laEmpresa-grupoHumano-tabajaConNosotros','Trabaja con nosotros')
+
+			+menu-boton('Productos','PRODUCTOS')
+				ul.sub-nav
+					+menu-boton('Vidrios','Vidrios')
+						ul.subsub-nav
+							+menu-boton('Vidrios-','Flotados')
+							+menu-boton('Vidrios-','Templados')
+							+menu-boton('Vidrios-','Laminados')
+							+menu-boton('Vidrios-','Espejos')
+							+menu-boton('Vidrios-','Reflectivos')
+							+menu-boton('Vidrios-','Impresos')
+							+menu-boton('Vidrios-','Coverglass')
+							+menu-boton('Vidrios-','Opacos')
+							+menu-boton('Vidrios-','Profilit')
+							+menu-boton('Vidrios-','Vidrios Extra Claros')
+					+menu-boton('herrajes','Herrajes')
+					+menu-boton('perfiles','Perfiles')
+					+menu-boton('perfinesDeAluminio','Perfiles de Aluminio')
+
+			+menu-boton('obras','OBRAS')
+			+menu-boton('presupuesto','PRESUPUESTO')
+			+menu-boton('contactenos','Contáctenos')
