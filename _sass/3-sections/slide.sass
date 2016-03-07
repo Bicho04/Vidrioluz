@@ -11,7 +11,8 @@ section.slide
   padding: 0
   @include media($large-screen) 
     width: 100%
-    margin: 0
+    max-width: 1008px
+    margin: 0 auto
   .picture
     overflow: hidden
     height: 400px
@@ -78,6 +79,8 @@ section.slide
         content: ''
       &.next:after
         content: ''
+
+        
   &.slide-small
     height: 300px
     .picture
@@ -88,6 +91,7 @@ section.slide
     @include media($small-screen) 
       &:after
         outline: $bd-size solid $color-primary      
+  
   @include media($small-screen) 
     &:after,
     &:before

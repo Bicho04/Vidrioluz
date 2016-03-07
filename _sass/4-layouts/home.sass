@@ -9,9 +9,6 @@ body
   padding: 0
   max-width: 1024px
   overflow: hidden
-  // display: flex
-  // flex-direction: column
-  // justify-content: space-between
 
 .vidrios h2
   padding: 0 1em 
@@ -34,6 +31,8 @@ body
   header
     max-width: 800px
     margin: 0 auto
+    @include media($large-screen)
+      min-width: 100%
   h2
     padding: 0
   .atras
@@ -67,6 +66,7 @@ body
         order: 1
         width: 320px  
         float: none
+        margin-left: 1em
     @include media($large-screen) 
         flex-direction: row
 
@@ -79,8 +79,8 @@ figure
   &:after
     content: ''
     position: absolute
-    right: 0
-    bottom: 0
+    right: -1px
+    bottom: -1px
     border-top: 0 solid transparent
     border-right: 0 solid transparent
     border-bottom: 40px solid #fff
@@ -88,8 +88,8 @@ figure
   &:before
     content: ''
     position: absolute
-    left: 0
-    top: 0
+    left: -1px
+    top: -1px
     border-top: 40px solid #fff
     border-right: 40px solid transparent
     border-bottom: 0 solid transparent
