@@ -3658,6 +3658,7 @@ ul.nav {
       -ms-flex-direction: column;
           flex-direction: column;
   list-style: none;
+  text-transform: uppercase;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -3920,7 +3921,6 @@ section.folders {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  background: gold;
 }
 
 @media screen and (min-width: 35rem) {
@@ -3934,7 +3934,6 @@ section.folders {
 section.folders .folder {
   position: relative;
   margin: 0 1em 5em;
-  background: red;
 }
 
 section.folders .folder figure {
@@ -3970,7 +3969,7 @@ section.folders .folder figure img {
   display: block;
   width: 100%;
   height: 100%;
-  background: white;
+  background: #eaeaea;
 }
 
 section.folders .folder h3 {
