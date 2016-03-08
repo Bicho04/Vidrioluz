@@ -5,19 +5,17 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	//- include ../_pages/laEmpresa-historia
-
 	section.slide.slide-small
 		.pictures
-			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			+slide-('1','Reflectivos','ban')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
 				h2 Vidrios Reflectivos
-				a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				+slide-('1', 'Reflectivos', 'lat')
 				.text
 					p Cool Lite® es la línea de vidrios laminados reflectivos diseñada para reducir significativamente el pasaje de calor de radiación solar hacia el interior de los edificios. Sus diferentes colores son visibles por reflexión de su capa reflectiva en tonos gris y azul respectivamente.
 

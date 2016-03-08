@@ -1,10 +1,4 @@
 
-mixin vidrio(img, h3)
-	a(href="productos-vidrios#{h3}.html").vidrio.folder
-		figure
-			img(src="http://loremflickr.com/200/100/glass?random=#{img}", alt="Vidrioluz - #{h3}")
-		h3 #{h3}
-
 extends ../_layout/default
 
 block title
@@ -14,19 +8,18 @@ block title
 block body
 	section.slide.slide-small
 		.pictures
-			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			include ../_includes/slide-generico
 
 	section.vidrios
 		h2 Vidrios
 		section.folders
-			+vidrio('1','Flotados')
-			+vidrio('2','Templados')
-			+vidrio('3','Laminados')
-			+vidrio('4','Espejos')
-			+vidrio('5','Reflectivos')
-			+vidrio('6','Impresos')
-			+vidrio('7','Coverglass')
-			+vidrio('8','Opacos')
-			+vidrio('9','Profilit')
-			+vidrio('0','Extra Claros')
-
+			+vidrio('Flotados','Flotados')
+			+vidrio('Templados','Templados')
+			+vidrio('Laminados','Laminados')
+			+vidrio('Espejos','Espejos')
+			+vidrio('Reflectivos','Reflectivos')
+			+vidrio('Impresos','Impresos')
+			+vidrio('Coverglass','Coverglass')
+			+vidrio('Opacos','Opacos')
+			+vidrio('Profilit','Profilit')
+			+vidrio('ExtraClaros','Extra Claros')

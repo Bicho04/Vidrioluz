@@ -36,9 +36,12 @@ body
   h2
     padding: 0
   .atras
+    i 
+      font-size: 1.2em
+      margin-right: 0.3em
     &:hover
       text-decoration:  none
-      color: invert($color-primary)
+      color: $color-selection
   h4
     color: darken($color-text,40)
     font-size: 1.2em
@@ -54,7 +57,7 @@ body
     .text
       @include media($large-screen)
         width: 60%
-    figure
+    .picture
       max-width:  320px
       width: 100% 
       overflow: hidden
@@ -70,7 +73,7 @@ body
     @include media($large-screen) 
         flex-direction: row
 
-figure 
+.picture 
   margin: 0 
   position: relative
   width: 320px
