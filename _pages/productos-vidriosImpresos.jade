@@ -9,15 +9,15 @@ block body
 
 	section.slide.slide-small
 		.pictures
-			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			+slide-('1', 'Impresos', 'ban')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
 				h2 Vidrios Impresos
-				a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				+slide-('1', 'Impresos', 'lat')
 				.text
 					p Los vidrios impresos poseen en una de sus caras una textura decorativa que transmite la luz en forma difusa e impide una visión clara, ofreciendo según el dibujo diferentes grados de traslucidez e intimidad.
 					p Tenemos disponibles varios diseños clásicos y modernos de diferentes colores, que permiten transmitir la sensación del ambiente deseado.

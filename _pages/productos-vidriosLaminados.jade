@@ -5,19 +5,17 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	//- include ../_pages/laEmpresa-historia
-
 	section.slide.slide-small
 		.pictures
-			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			+slide-('1','Laminados','ban')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
 				h2 Vidrios Laminados
-				a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				+slide-('1', 'Laminados', 'lat')
 				.text
 					p Es considerado el vidrio de seguridad y protección por excelencia. Brinda seguridad a las personas y protección a bienes materiales ante intentos de robo y vandalismo, impidiendo el ingreso fácil a una propiedad por rotura de vidrios de puertas o ventanas.
 

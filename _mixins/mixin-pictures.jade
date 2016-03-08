@@ -1,4 +1,14 @@
-mixin picture(img, h3)
+mixin slide(img, h3)
 	.picture
-		img(src="http://loremflickr.com/1024/400/glass?random=#{img}", alt="Vidrioluz - #{link}")
+		img(src="assets/img/slide/#{img}.jpg" alt="Vidrioluz slide")
+		h3 #{h3}
+		
+mixin slide-(img, tipo, formato)
+	.picture
+		img(src="assets/img/vidrios#{tipo}/#{img}-#{formato}.jpg")
+
+mixin vidrio(img, h3)
+	a(href="productos-vidrios#{h3}.html").vidrio.folder
+		figure
+			img(src="assets/img/folders/#{img}.jpg", alt="Vidrioluz - #{h3}")
 		h3 #{h3}

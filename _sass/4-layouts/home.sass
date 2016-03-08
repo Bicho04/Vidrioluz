@@ -9,9 +9,6 @@ body
   padding: 0
   max-width: 1024px
   overflow: hidden
-  // display: flex
-  // flex-direction: column
-  // justify-content: space-between
 
 .vidrios h2
   padding: 0 1em 
@@ -34,12 +31,17 @@ body
   header
     max-width: 800px
     margin: 0 auto
+    @include media($large-screen)
+      min-width: 100%
   h2
     padding: 0
   .atras
+    i 
+      font-size: 1.2em
+      margin-right: 0.3em
     &:hover
       text-decoration:  none
-      color: invert($color-primary)
+      color: $color-selection
   h4
     color: darken($color-text,40)
     font-size: 1.2em
@@ -55,7 +57,7 @@ body
     .text
       @include media($large-screen)
         width: 60%
-    figure
+    .picture
       max-width:  320px
       width: 100% 
       overflow: hidden
@@ -67,10 +69,11 @@ body
         order: 1
         width: 320px  
         float: none
+        margin-left: 1em
     @include media($large-screen) 
         flex-direction: row
 
-figure 
+.picture 
   margin: 0 
   position: relative
   width: 320px
@@ -79,8 +82,8 @@ figure
   &:after
     content: ''
     position: absolute
-    right: 0
-    bottom: 0
+    right: -1px
+    bottom: -1px
     border-top: 0 solid transparent
     border-right: 0 solid transparent
     border-bottom: 40px solid #fff
@@ -88,8 +91,8 @@ figure
   &:before
     content: ''
     position: absolute
-    left: 0
-    top: 0
+    left: -1px
+    top: -1px
     border-top: 40px solid #fff
     border-right: 40px solid transparent
     border-bottom: 0 solid transparent

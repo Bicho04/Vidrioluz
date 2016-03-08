@@ -5,19 +5,17 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	//- include ../_pages/laEmpresa-historia
-
 	section.slide.slide-small
 		.pictures
-			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			+slide-('1','Flotados','ban')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
 				h2 Vidrios Flotados
-				a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				+slide-('1', 'Flotados', 'lat')
 				.text
 					p Tradicionalmente denominado cristal plano, el vidrio Float o flotado es insustituible cuando se desea obtener una visión clara sin distorsión óptica y constituye la materia prima por excelencia para ser transformado en vidrio templado, laminado, fabricar espejo y manufacturar unidades de doble vidriado hermético.
 					h4 Aplicación	

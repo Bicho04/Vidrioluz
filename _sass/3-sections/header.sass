@@ -14,7 +14,7 @@ header
     position: relative
     top: 0.25em
     @include media($large-screen)
-      padding: 1em
+      padding: 0 0 0 0.2rem
     img
       display: block
 
@@ -22,37 +22,36 @@ nav.header-menu
   width: 100%
   font-size: 0.8em
   @include media($large-screen)
-    width: 50%
+    width: 75%
 
 ul.nav
-  align-items: space-between
-  display: flex
-  flex-direction: column
   list-style: none
   text-transform: uppercase
-  margin: 0
-  padding: 0
+  background: lighten($color-text,72)
   width: 100%
   @include media($large-screen) 
-    padding: 3em 0
-    flex-direction: row
-    justify-content: flex-end
+    background: transparent
+    padding: 3em 1em 3em 0
+    text-align: right
   li
-    position: relative
-    background: lighten($color-text,75)
     margin: 0
     white-space: nowrap
-    text-align: center
-    width: 100%
-    margin-right: 0
-    margin-left: auto
+    width: 90%
+    margin: auto
     z-index: 10
+    position: relative
     @include media($large-screen) 
-      background: transparent
-      padding: 0 1em
-      width: inherit
-    &:hover ul.sub-nav
-      display: block
+      padding: 0 0 0 1.5em
+      width: auto
+      display: inline-block
+    &:hover,
+    &:focus
+      ul.sub-nav
+        display: block
+      >a
+        color: darken($color-primary,30)
+        border-color: lighten($color-text,20)
+
   a 
     box-sizing: border-box
     color: lighten($color-text,12)
@@ -65,32 +64,48 @@ ul.nav
       border-top: 1px solid transparent
       line-height: 2em
       padding-top: 0.2em
-    &:hover,&:focus
+    &:hover,
+    &:focus
       border-color: lighten($color-text,20)
       text-decoration: none
+
 ul.sub-nav
+  display: block
+  padding: 0.5em 0
   @include media($large-screen) 
+    text-align: left
     position: absolute
+    // background: rgba(245,245,245,0.8)
     background: rgba(255,255,255,0.8)
-    left: 0
+    left: 0.5em
     top: 100%
     width: auto
     display: none
   li 
+    padding: 0 1em
+    display: block
     position: relative
-    &:hover ul.subsub-nav
+    &:hover ul.subsub-nav,
+    &:focus ul.subsub-nav
       display: block
     a 
       border-bottom: 1px solid lighten($color-text,60)
+      &:hover
+        border-bottom: 1px solid lighten($color-text,60)
+        border-top: 1px solid transparent 
 
 ul.subsub-nav
+  padding: 0.5em 0
+  display: block
   @include media($large-screen)
     position: absolute
     background: rgba(255,255,255,0.8)
     left: 100%
-    top: 0
+    top: -0.5em
     width: auto
     display: none
+  li
+    display: block
 
 .nav-toggle
   position: absolute
@@ -101,3 +116,7 @@ ul.subsub-nav
   right: 0.5em
   padding: 0
   background: lighten($color-text,75)
+  &:hover,
+  &:focus
+    color: $color-text
+    text-decoration: none

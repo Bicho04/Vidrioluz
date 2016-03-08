@@ -3248,15 +3248,15 @@ a:hover, a:focus {
 }
 
 ::-moz-selection {
-  background: #A79D05;
+  background: #1521f6;
 }
 
 ::selection {
-  background: #A79D05;
+  background: #1521f6;
 }
 
 ::-moz-selection {
-  background: #A79D05;
+  background: #1521f6;
 }
 
 img::-moz-selection {
@@ -3272,7 +3272,7 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: #A79D05;
+  -webkit-tap-highlight-color: #1521f6;
 }
 
 html,
@@ -3628,7 +3628,7 @@ header a.header-Logo {
 
 @media screen and (min-width: 52rem) {
   header a.header-Logo {
-    padding: 1em;
+    padding: 0 0 0 0.2rem;
   }
 }
 
@@ -3643,61 +3643,49 @@ nav.header-menu {
 
 @media screen and (min-width: 52rem) {
   nav.header-menu {
-    width: 50%;
+    width: 75%;
   }
 }
 
 ul.nav {
-  -webkit-align-items: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
   list-style: none;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
+  background: #fcfcfc;
   width: 100%;
 }
 
 @media screen and (min-width: 52rem) {
   ul.nav {
-    padding: 3em 0;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    background: transparent;
+    padding: 3em 1em 3em 0;
+    text-align: right;
   }
 }
 
 ul.nav li {
-  position: relative;
-  background: white;
   margin: 0;
   white-space: nowrap;
-  text-align: center;
-  width: 100%;
-  margin-right: 0;
-  margin-left: auto;
+  width: 90%;
+  margin: auto;
   z-index: 10;
+  position: relative;
 }
 
 @media screen and (min-width: 52rem) {
   ul.nav li {
-    background: transparent;
-    padding: 0 1em;
-    width: inherit;
+    padding: 0 0 0 1.5em;
+    width: auto;
+    display: inline-block;
   }
 }
 
-ul.nav li:hover ul.sub-nav {
+ul.nav li:hover ul.sub-nav, ul.nav li:focus ul.sub-nav {
   display: block;
+}
+
+ul.nav li:hover > a, ul.nav li:focus > a {
+  color: #00010c;
+  border-color: #777777;
 }
 
 ul.nav a {
@@ -3723,11 +3711,17 @@ ul.nav a:hover, ul.nav a:focus {
   text-decoration: none;
 }
 
+ul.sub-nav {
+  display: block;
+  padding: 0.5em 0;
+}
+
 @media screen and (min-width: 52rem) {
   ul.sub-nav {
+    text-align: left;
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
-    left: 0;
+    left: 0.5em;
     top: 100%;
     width: auto;
     display: none;
@@ -3735,10 +3729,13 @@ ul.nav a:hover, ul.nav a:focus {
 }
 
 ul.sub-nav li {
+  padding: 0 1em;
+  display: block;
   position: relative;
 }
 
-ul.sub-nav li:hover ul.subsub-nav {
+ul.sub-nav li:hover ul.subsub-nav,
+ul.sub-nav li:focus ul.subsub-nav {
   display: block;
 }
 
@@ -3746,15 +3743,29 @@ ul.sub-nav li a {
   border-bottom: 1px solid #dddddd;
 }
 
+ul.sub-nav li a:hover {
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid transparent;
+}
+
+ul.subsub-nav {
+  padding: 0.5em 0;
+  display: block;
+}
+
 @media screen and (min-width: 52rem) {
   ul.subsub-nav {
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
     left: 100%;
-    top: 0;
+    top: -0.5em;
     width: auto;
     display: none;
   }
+}
+
+ul.subsub-nav li {
+  display: block;
 }
 
 .nav-toggle {
@@ -3766,6 +3777,11 @@ ul.sub-nav li a {
   right: 0.5em;
   padding: 0;
   background: white;
+}
+
+.nav-toggle:hover, .nav-toggle:focus {
+  color: #444;
+  text-decoration: none;
 }
 
 section.slide {
@@ -3780,7 +3796,8 @@ section.slide {
 @media screen and (min-width: 52rem) {
   section.slide {
     width: 100%;
-    margin: 0;
+    max-width: 1008px;
+    margin: 0 auto;
   }
 }
 
@@ -3946,8 +3963,8 @@ section.folders .folder figure {
 section.folders .folder figure:after {
   content: '';
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -1px;
+  bottom: -1px;
   border-top: 0 solid transparent;
   border-right: 0 solid transparent;
   border-bottom: 20px solid #fff;
@@ -3957,8 +3974,8 @@ section.folders .folder figure:after {
 section.folders .folder figure:before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -1px;
+  top: -1px;
   border-top: 20px solid #fff;
   border-right: 20px solid transparent;
   border-bottom: 0 solid transparent;
@@ -3986,8 +4003,8 @@ section.folders .folder h3 {
 section.folders .folder h3:after {
   content: '';
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -1px;
+  bottom: -1px;
   border-top: 0 solid transparent;
   border-right: 0 solid transparent;
   border-bottom: 20px solid #fff;
@@ -4140,13 +4157,24 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 52rem) {
+  .cont-textImg header {
+    min-width: 100%;
+  }
+}
+
 .cont-textImg h2 {
   padding: 0;
 }
 
+.cont-textImg .atras i {
+  font-size: 1.2em;
+  margin-right: 0.3em;
+}
+
 .cont-textImg .atras:hover {
   text-decoration: none;
-  color: #f9f160;
+  color: #1521f6;
 }
 
 .cont-textImg h4 {
@@ -4179,7 +4207,7 @@ body {
   }
 }
 
-.cont-textImg .content figure {
+.cont-textImg .content .picture {
   max-width: 320px;
   width: 100%;
   overflow: hidden;
@@ -4187,19 +4215,20 @@ body {
 }
 
 @media screen and (min-width: 35rem) {
-  .cont-textImg .content figure {
+  .cont-textImg .content .picture {
     float: right;
     margin-bottom: 0.5em;
   }
 }
 
 @media screen and (min-width: 52rem) {
-  .cont-textImg .content figure {
+  .cont-textImg .content .picture {
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
     width: 320px;
     float: none;
+    margin-left: 1em;
   }
 }
 
@@ -4211,7 +4240,7 @@ body {
   }
 }
 
-figure {
+.picture {
   margin: 0;
   position: relative;
   width: 320px;
@@ -4219,29 +4248,29 @@ figure {
   margin-left: 1em;
 }
 
-figure:after {
+.picture:after {
   content: '';
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -1px;
+  bottom: -1px;
   border-top: 0 solid transparent;
   border-right: 0 solid transparent;
   border-bottom: 40px solid #fff;
   border-left: 40px solid transparent;
 }
 
-figure:before {
+.picture:before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -1px;
+  top: -1px;
   border-top: 40px solid #fff;
   border-right: 40px solid transparent;
   border-bottom: 0 solid transparent;
   border-left: 0 solid transparent;
 }
 
-figure img {
+.picture img {
   display: block;
   width: 320px;
   height: 100%;

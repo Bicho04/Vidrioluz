@@ -1,23 +1,20 @@
 extends ../_layout/default
 
 block title
-	title Vidrios templados
+	title Vidrios Templados
 	meta(name='description', content='#####')
 
-block body
-	//- include ../_pages/laEmpresa-historia
-
-	section.slide.slide-small
+block body	section.slide.slide-small
 		.pictures
-			+picture('1','IMPONIENDO UNA TENDENCIA MODERNA Y VISIONARIA')
+			+slide-('1','Templados','ban')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
 				h2 Vidrios Templados
-				a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				+slide-('1', 'Templados', 'lat')
 				.text
 					p Son vidrios de seguridad que pasan por un tratamiento térmico y posterior enfriamiento súbito para adquirir dos propiedades principales. La primera, es cuatro veces más duro que un vidrio normal o crudo, lo que le permite ser apto para uso en áreas donde existen riesgos de roturas o en zonas de interacción con las personas. La segunda, si el vidrio templado llegare a romperse, este se fragmentará en miles de pedazos pequeños, minimizando las probabilidades de heridas.
 
