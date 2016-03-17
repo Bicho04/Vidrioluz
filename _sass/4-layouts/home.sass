@@ -9,7 +9,8 @@ body
   padding: 0
   max-width: 1024px
   overflow: hidden
-
+  background: $color-bg
+  
 .vidrios h2
   padding: 0 1em 
 
@@ -23,7 +24,6 @@ body
     padding: 0
 
 .cont-textImg
-  width: 90%
   margin: 0 auto
   color: darken($color-text,30)
   margin-bottom: 4em
@@ -36,6 +36,10 @@ body
   h2
     padding: 0
   .atras
+    line-height: 5em
+    padding-top: 1em
+    text-align: right
+    width: 100%
     i 
       font-size: 1.2em
       margin-right: 0.3em
@@ -49,56 +53,40 @@ body
     line-height: 1.2em
     margin: 0
   .content
-    max-width: 800px
+    max-width: 95%
     margin: 0 auto 3em
     @include media($large-screen) 
       display: flex
+      max-width: 100%
       flex-direction: row
+      justify-content: space-between
+    h2 
+      margin-top: 0
     .text
       @include media($large-screen)
         width: 60%
-    .picture
-      max-width:  320px
-      width: 100% 
-      overflow: hidden
-      margin: 1em auto 2em
+    figure.slide-content
+      margin: 0 auto
+      padding: 0
+      position: relative
+      z-index: 0
+      width: 350px
+      height: 450px
       @include media($small-screen)
         float: right 
         margin-bottom:  0.5em
       @include media($large-screen)
-        order: 1
-        width: 320px  
+        @include order(2)
+        width: 350px  
         float: none
-        margin-left: 1em
+        text-align: right
+        margin: 0 0 3em
+      img
+        width: 100%
+        height: 100%
+        background: lighten($color-text,55)
     @include media($large-screen) 
-        flex-direction: row
+      flex-direction: row
 
-.picture 
-  margin: 0 
-  position: relative
-  width: 320px
-  height: 400px
-  margin-left: 1em
-  &:after
-    content: ''
-    position: absolute
-    right: -1px
-    bottom: -1px
-    border-top: 0 solid transparent
-    border-right: 0 solid transparent
-    border-bottom: 40px solid #fff
-    border-left: 40px solid transparent
-  &:before
-    content: ''
-    position: absolute
-    left: -1px
-    top: -1px
-    border-top: 40px solid #fff
-    border-right: 40px solid transparent
-    border-bottom: 0 solid transparent
-    border-left: 0 solid transparent
-  img
-    display: block
-    width: 320px
-    height: 100%
-    background: lighten($color-text,75)
+
+

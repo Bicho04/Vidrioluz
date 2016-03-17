@@ -5,18 +5,23 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	section.slide.slide-small
+	figure.slide.slide-small
 		.pictures
-			+slide-('1','ExtraClaros','ban')
+			+slide-('ExtraClaros','ban','1')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
-				h2 Vidrios Extra Claro
 				include ../_includes/volver
 			.content
-				+slide-('1', 'ExtraClaros', 'lat')
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('ExtraClaros','lat','1')
+						+slide-('ExtraClaros','lat','2')
+						+slide-('ExtraClaros','lat','3')
+					.slide-navs
 				.text
+					h2 Extra Claro
 					p Los cristales Extra Claros son mucho más trasparentes que los vidrios normales, brindan una excelente claridad, garantizando colores verdaderos y calidad óptima en la visión.
 					p A diferencia de un cristal tradicional, los extra claros no distorsionan los colores, son mucho más trasparentes que los normales, brindan una excelente claridad, garantizando colores verdaderos y calidad óptima en la visión.
 					p Su canto transparente lo hace ideal para muebles, cubiertas, shower doors y cualquier elemento acristalado con su canto a la vista.

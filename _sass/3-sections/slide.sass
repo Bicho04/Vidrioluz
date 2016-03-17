@@ -1,56 +1,62 @@
-section.slide
+figure.slide
   $bd-size: 0.4em
   $bd-box: 200px
   $bd-vertical: -$bd-box/1.6
   $bd-horizontal: -$bd-box/2
   position: relative
   box-sizing: border-box
-  overflow: hidden
   height: 400px
   margin: 0 1em
   padding: 0
   @include media($large-screen) 
     width: 100%
-    max-width: 1008px
     margin: 0 auto
+  
   .picture
     overflow: hidden
-    height: 400px
     width: 100%
     position: relative
+    margin-left: 0
 
+  .pictures
+    overflow: hidden
+    position: relative
+    margin-bottom: 3em
+    @include media($small-screen) 
+      &:after,
+      &:before
+        background: $color-bg
+        box-sizing: border-box
+        content: 'O'
+        height: $bd-box
+        position: absolute
+        transform: rotate(-35deg)
+        width: $bd-box
+        z-index: 99
+      &:before
+        top: $bd-vertical
+        left: $bd-horizontal
+      &:after
+        bottom: $bd-vertical
+        right: $bd-horizontal
+    &.dos
+      display: none
+      @include media($small-screen) 
+        display: block
+        
     img
       display: block
-      width: 100%
-      height: 100%
+      width: auto
+      max-width: 1024px
+      min-width:100%
+      min-height: 100%
+      height: auto
       background:
         color: #f1f1f1
-        image: url(../img/logo-vidrioluz.png)
         repeat: no-repeat
         position: center center
         size: 50% 
 
-    h3
-      $h3-widrh: 100%
-      bottom: 0
-      color: #fff
-      font-size: 1.8em
-      font-weight: 300
-      left: 50%
-      line-height: 1.2em
-      margin-left: -($h3-widrh / 2)
-      position: absolute
-      text-align: center
-      text-shadow: 0 1px 2px darken($color-text,20)
-      width: $h3-widrh
-
-      @include media($small-screen) 
-        font-size: 2.2em
-        width: $h3-widrh*0.7
-        margin-left: -($h3-widrh*0.7 / 2)
-
-      @include media($large-screen) 
-        font-size: 2.8em
 
   .slide-navs
     position: absolute
@@ -59,12 +65,12 @@ section.slide
     font-size: 3em
     z-index: 6
     .slide_nav
-      color: #fff
+      color: #f1f1f1
       display: block
-      padding: 0.2em
       display: inline
-      margin: 0 0.2em
       line-height: 0.5em
+      margin: 0 0.2em
+      padding: 0.2em
       &:after
         font: normal normal normal 14px/1 FontAwesome
         font-size: inherit
@@ -80,33 +86,27 @@ section.slide
       &.next:after
         content: ''
 
+
         
   &.slide-small
     height: 300px
+    position: relative
     .picture
       border-bottom: $bd-size solid $color-primary
       height: 300px
-      h3
-        display: none
-    @include media($small-screen) 
-      &:after
-        outline: $bd-size solid $color-primary      
-  
-  @include media($small-screen) 
-    &:after,
-    &:before
-      background: #fff
-      box-sizing: border-box
-      content: ''
-      height: $bd-box
-      position: absolute
-      transform: rotate(-35deg)
-      width: $bd-box
-      z-index: 5
-    &:before
-      top: $bd-vertical
-      left: $bd-horizontal
+    .pictures
+      @include media($small-screen) 
+        &:after
+          outline: $bd-size solid $color-primary      
 
-    &:after
-      bottom: $bd-vertical
-      right: $bd-horizontal
+
+  &.slide-content 
+    position: relative
+    .pictures
+      width: 350px 
+      height: 450px
+      img 
+        height: 450px
+        margin: 0
+        padding: 0
+        display: block

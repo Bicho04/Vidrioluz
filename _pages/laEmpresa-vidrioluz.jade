@@ -5,9 +5,12 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	section.slide.slide-small
-		.pictures
-			include ../_includes/slide-laEmpresa
+	figure.slide.slide-small
+		.pictures#pictures
+			+slide-('Gral','Vidrioluz', '1')
+			+slide-('Gral','Vidrioluz', '2')
+			+slide-('Gral','Vidrioluz', '3')
+		.slide-navs
 			
 	section
 		article.cont-text

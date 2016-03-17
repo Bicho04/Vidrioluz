@@ -5,18 +5,25 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	section.slide.slide-small
+	figure.slide.slide-small
 		.pictures
-			+slide-('1','Laminados','ban')
+			+slide-('Coverglass','ban','1')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
-				h2 Vidrios Laminados
 				include ../_includes/volver
 			.content
-				+slide-('1', 'Laminados', 'lat')
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('Laminados','lat','1')
+						+slide-('Laminados','lat','2')
+						+slide-('Laminados','lat','3')
+					.slide-navs
+					.pictures.dos
+						+slide-('Laminados','Infografia','1')
 				.text
+					h2 Laminados
 					p Es considerado el vidrio de seguridad y protección por excelencia. Brinda seguridad a las personas y protección a bienes materiales ante intentos de robo y vandalismo, impidiendo el ingreso fácil a una propiedad por rotura de vidrios de puertas o ventanas.
 
 					p Se fabrica mediante la adherencia de dos hojas de vidrio común a través de una lámina de plástico especial denominada polivinil butiral o PVB, firmemente unidas entre sí, de forma permanente, mediante un proceso de calor y presión en un horno autoclave.

@@ -5,18 +5,23 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	section.slide.slide-small
+	figure.slide.slide-small
 		.pictures
-			+slide-('1','Coverglass','ban')
+			+slide-('Coverglass','ban','1')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
-				h2 Vidrios Coverglass
 				include ../_includes/volver
 			.content
-				+slide-('1', 'Coverglass', 'lat')
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('Coverglass','lat','1')
+						+slide-('Coverglass','lat','2')
+						+slide-('Coverglass','lat','3')
+					.slide-navs
 				.text
+					h2 Coverglass
 					p Coverglass es una colección de vidrios pintados diseñados para sobrepasar los límites de la imaginación y la creatividad decorativa. Colores inspirados en los sueños de Leonardo da Vinci reflejan la luz de una manera inusual creando sensaciones de elegancia y exclusividad en sus ambientes. 
 					p Ideal para baños, cocinas, vestidores, frentes de placards, muebles, tapas de mesa y todo tipo de revestimientos innovadores.
 					p En proyectos no residenciales, aporta elegancia y jerarquía en recepciones, lobbies, salas de reunión y tabiquería de interiores.

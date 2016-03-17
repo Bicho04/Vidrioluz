@@ -5,16 +5,15 @@ section.folders
   justify-content: space-around
   // background: gold
   @include media($small-screen) 
-    justify-content: space-around
+    justify-content: flex-between
   .folder
     position: relative
-    margin: 0 1em 5em
-    // background: red
+    margin: 0 0.5em 5em
     figure 
+      height: 100px
       margin: 0
       position: relative
       width: 200px
-      height: 100px
       &:after
         content: ''
         position: absolute
@@ -58,6 +57,12 @@ section.folders
         border-left: 20px solid transparent
         
     &:hover
-      text-decoration: none
+      text-decoration: none        
       h3
         background: $color-text
+    
+    &:nth-child(11),
+    &:nth-child(12)
+      opacity: 0
+      &:hover
+        cursor: default

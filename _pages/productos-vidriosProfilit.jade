@@ -5,18 +5,23 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	section.slide.slide-small
+	figure.slide.slide-small
 		.pictures
-			+slide-('1','Profilit','ban')
+			+slide-('Profilit','ban','1')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
-				h2 Vidrios Profilit
 				include ../_includes/volver
 			.content
-				+slide-('1', 'Profilit', 'lat')
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('Profilit','lat','1')
+						+slide-('Profilit','lat','2')
+						+slide-('Profilit','lat','3')
+					.slide-navs
 				.text
+					h2 Profilit
 					p El sistema de perfiles autoportantes de vidrio Profilit® es una innovadora y económica alternativa a las técnicas convencionales de cerramiento con vidrio.
 					p Su novedosa apariencia visual provee líneas limpias e ininterrumpidas a una fachada, ya que la resistencia mecánica del perfil de vidrio elimina la necesidad de emplear una carpintería convencional para construir cerramientos de grandes dimensiones.
 					p Internamente ofrece una superficie vidriada, sin obstrucciones, sutilmente translúcida, que permite el máximo ingreso de luz natural difusa sin producir sombras.

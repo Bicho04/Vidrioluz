@@ -1,0 +1,21 @@
+extends ../_layout/default
+
+block title
+	title Aplicaciones
+	meta(name='description', content='#####')
+
+block body
+	figure.slide.slide-small
+		.pictures
+			include ../_includes/slide-generico
+			
+	section
+		article.cont-text
+			h2 Aplicaciones
+			ul
+				li: a(href="productos-vidriosLaminados.html") Laminado
+				li: a(href="productos-vidriosEspejos.html") Espejos
+				li: a(href="productos-vidriosProfilit.html") Profilit
+				li: a(href="productos-vidriosOpacid.html") Opacid
+				li: a(href="productos-vidriosCoverglass.html") Coverglass
+

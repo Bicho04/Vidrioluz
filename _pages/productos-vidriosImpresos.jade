@@ -5,20 +5,23 @@ block title
 	meta(name='description', content='#####')
 
 block body
-	//- include ../_pages/laEmpresa-historia
-
-	section.slide.slide-small
+	figure.slide.slide-small
 		.pictures
-			+slide-('1', 'Impresos', 'ban')
+			+slide-('Impresos','ban','1')
 
 	section.vidrios-vidrio
 		article.cont-textImg
 			header
-				h2 Vidrios Impresos
 				include ../_includes/volver
 			.content
-				+slide-('1', 'Impresos', 'lat')
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('Impresos','lat','1')
+						+slide-('Impresos','lat','2')
+						+slide-('Impresos','lat','3')
+					.slide-navs
 				.text
+					h2 Impresos
 					p Los vidrios impresos poseen en una de sus caras una textura decorativa que transmite la luz en forma difusa e impide una visión clara, ofreciendo según el dibujo diferentes grados de traslucidez e intimidad.
 					p Tenemos disponibles varios diseños clásicos y modernos de diferentes colores, que permiten transmitir la sensación del ambiente deseado.
 					p En tiempos modernos, los vidrios impresos se utilizan en una amplia gama de destinos que, entre otros, incluyen el equipamiento de interiores, la arquitectura comercial y la decoración en general.
