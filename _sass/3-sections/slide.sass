@@ -13,13 +13,13 @@ figure.slide
     margin: 0 auto
   
   .picture
-    overflow: hidden
     width: 100%
     position: relative
     margin-left: 0
 
   .pictures
     overflow: hidden
+    height: 400px
     position: relative
     margin-bottom: 3em
     @include media($small-screen) 
@@ -92,9 +92,11 @@ figure.slide
     height: 300px
     position: relative
     .picture
-      border-bottom: $bd-size solid $color-primary
       height: 300px
+      border-bottom: $bd-size solid $color-primary
+      overflow: hidden
     .pictures
+      height: 300px
       @include media($small-screen) 
         &:after
           outline: $bd-size solid $color-primary      

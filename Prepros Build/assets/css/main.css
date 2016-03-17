@@ -3800,6 +3800,7 @@ figure.slide {
 }
 
 figure.slide .picture {
+  overflow: hidden;
   width: 100%;
   position: relative;
   margin-left: 0;
@@ -3807,7 +3808,6 @@ figure.slide .picture {
 
 figure.slide .pictures {
   overflow: hidden;
-  height: 400px;
   position: relative;
   margin-bottom: 3em;
 }
@@ -3902,12 +3902,7 @@ figure.slide.slide-small {
 }
 
 figure.slide.slide-small .picture {
-  height: 300px;
   border-bottom: 0.4em solid #060E9F;
-  overflow: hidden;
-}
-
-figure.slide.slide-small .pictures {
   height: 300px;
 }
 
