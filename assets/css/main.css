@@ -3845,7 +3845,7 @@ figure.slide .pictures.dos {
   }
 }
 
-figure.slide .pictures img {
+figure.slide .pictures img, figure.slide .pictures #map {
   display: block;
   width: auto;
   max-width: 1024px;
@@ -4127,6 +4127,145 @@ footer.footer h4.fincreativo a:hover {
   text-transform: uppercase;
 }
 
+section.novedades {
+  margin: 2em 0;
+}
+
+section.novedades figure {
+  margin: 0.5em 1em 0.5em 0;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: #eee;
+  float: left;
+  position: relative;
+}
+
+section.novedades figure:after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  border-top: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 40px solid #fff;
+  border-left: 40px solid transparent;
+}
+
+section.novedades figure:before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border-top: 40px solid #fff;
+  border-right: 40px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 0 solid transparent;
+}
+
+section.novedades img {
+  width: 100%;
+  margin-top: 4.5em;
+}
+
+section.novedades h2 {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+section.novedades h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.3em;
+}
+
+section.novedades p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+section.novedades a {
+  line-height: 4em;
+}
+
+section.novedades hr {
+  border-style: dashed;
+  border-color: #444;
+  margin: 3.5em 0 2em;
+}
+
+section.novedades hr:last-child hr {
+  display: none;
+}
+
+section.contactos {
+  margin-bottom: 3em;
+}
+
+section.contactos h2 {
+  margin: 1em 0 1em;
+}
+
+section.contactos .contacto {
+  width: 350px;
+  max-width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.9em;
+}
+
+section.contactos .contacto i {
+  margin-right: 0.5em;
+}
+
+section.contactos .contacto h4 {
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+section.contactos .contacto p.horarios {
+  margin: 0;
+}
+
+section.contactos form.form {
+  max-width: 500px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+section.contactos form.form .input {
+  display: inline-block;
+  width: 50%;
+  padding: 0 0.5em 1em;
+}
+
+section.contactos form.form .input input {
+  background: #e7e7e7;
+  width: 100%;
+  border: 1px solid #b3b2b1;
+  padding: 0.3em 0.5em;
+}
+
+section.contactos form.form textarea {
+  margin: 0 0.5em;
+  padding: 0.5em;
+  height: 160px;
+  width: calc(100% - 1em);
+  background: #e7e7e7;
+}
+
+section.contactos form.form button {
+  margin: 0.5em;
+  background: #060E9F;
+  color: white;
+  padding: 0.5em 1.5em;
+}
+
+section.contactos #map {
+  width: 100%;
+  height: 400px;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -4183,7 +4322,6 @@ body {
 
 .cont-textImg .atras {
   line-height: 5em;
-  padding-top: 1em;
   text-align: right;
   width: 100%;
 }

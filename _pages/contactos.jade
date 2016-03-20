@@ -1,0 +1,30 @@
+extends ../_layout/default
+
+block title
+	title Contactos
+	meta(name='description', content='Trabaja con Nosotros')
+
+block body
+	figure.slide.slide-small
+		.pictures
+			+slide-('Gral','mapa','1')
+			
+	section.contactos
+		h2 contactos
+		.contacto
+			p
+				i.fa.fa-home
+				| Médicos del Chaco 2713 c/ M. Mallorquín. Asunción, Paraguay.
+			p
+				i.fa.fa-phone
+				| +595 21 562 754,  554 998
+			h4 Horario de Atención 
+			p.horarios Lunes a Viernes: 8:00 a 18:00
+			p.horarios Sábados: 8:00 a 12:00
+		form.form
+			.input: input(type="text" name="Nombre" placeholder="Nombre")
+			.input: input(type="email" name="Email" placeholder="Email")
+			.input: input(type="text" name="Asunto" placeholder="Asunto")
+			.input: input(type="text" name="Empresa" placeholder="Empresa")
+			textarea(name="mensaje" placeholder="Mensaje")
+			button Enviar
