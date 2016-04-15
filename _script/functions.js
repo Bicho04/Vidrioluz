@@ -55,12 +55,12 @@ $(function(){
 
 
 
-$('.nav-boton').bind('click', function(e){
-  // $(this).children('.sub-nav').slideToggle('fast');  // apply the toggle to the ul
-  $(this).parent().find('.sub-nav').slideToggle('fast');  // apply the toggle to the ul
-  $(this).parent().toggleClass('is-expanded');
-  e.preventDefault();
-});
+// $('.nav-boton').bind('click', function(e){
+//   // $(this).children('.sub-nav').slideToggle('fast');  // apply the toggle to the ul
+//   $(this).parent().find('.sub-nav').slideToggle('fast');  // apply the toggle to the ul
+//   $(this).parent().toggleClass('is-expanded');
+//   e.preventDefault();
+// });
 
 
 

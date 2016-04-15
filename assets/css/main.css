@@ -4097,6 +4097,10 @@ ul.nav li {
   }
 }
 
+ul.nav li:hover ul.sub-nav, ul.nav li:focus ul.sub-nav {
+  display: block;
+}
+
 ul.nav li:hover > a, ul.nav li:focus > a {
   color: #00010c;
   border-color: #777777;
@@ -4146,6 +4150,11 @@ ul.sub-nav li {
   padding: 0 1em;
   display: block;
   position: relative;
+}
+
+ul.sub-nav li:hover ul.subsub-nav,
+ul.sub-nav li:focus ul.subsub-nav {
+  display: block;
 }
 
 ul.sub-nav li a {
@@ -4200,9 +4209,8 @@ section.novedades {
 section.novedades figure {
   margin: 0 1em 0.5em 0;
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  background: #eee;
+  max-width: 200px;
+  max-height: 200px;
   position: relative;
   vertical-align: top;
 }

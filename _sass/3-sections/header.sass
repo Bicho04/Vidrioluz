@@ -46,6 +46,8 @@ ul.nav
       display: inline-block
     &:hover,
     &:focus
+      ul.sub-nav
+        display: block
       >a
         color: darken($color-primary,30)
         border-color: lighten($color-text,20)
@@ -83,6 +85,9 @@ ul.sub-nav
     padding: 0 1em
     display: block
     position: relative
+    &:hover ul.subsub-nav,
+    &:focus ul.subsub-nav
+      display: block
     a 
       border-bottom: 1px solid lighten($color-text,60)
       &:hover
