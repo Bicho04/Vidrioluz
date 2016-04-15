@@ -1,21 +1,34 @@
-@import "0-tools/fonts";
-@import "0-tools/font/font-awesome.scss";
-@import "0-tools/bourbon/bourbon";
-@import "0-tools/neat/neat";
-@import "0-tools/normalize";
-@import "0-tools/responsiveslides";
 
-@import "1-base/vars";
-@import "1-base/base";
+// Sass Modules
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "2-modules/owl.carousel";
-@import "2-modules/responsive-nav";
+//0-tools
+@import '0-tools/bourbon/bourbon';
+@import '0-tools/neat/neat';
+@import '0-tools/fonts';
+@import '0-tools/font/font-awesome';
+@import '0-tools/normalize';
+@import '0-tools/responsiveslides';
 
-@import "3-sections/header";
-@import "3-sections/slide";
-@import "3-sections/folders";
-@import "3-sections/footer";
-@import "3-sections/novedades";
-@import "3-sections/contactos";
+//1-base
+@import '1-base/vars';
+@import '1-base/base';
 
-@import "4-layouts/home";
+//2-modules
+@import '2-modules/owl.carousel';
+@import '2-modules/responsive-nav';
+@import '2-modules/mapas';
+@import '2-modules/modal';
+@import '2-modules/accordion';
+
+//3-section
+@import '3-sections/contactos';
+@import '3-sections/folders';
+@import '3-sections/footer';
+@import '3-sections/header';
+@import '3-sections/novedades';
+@import '3-sections/slide';
+
+//4-layouts
+@import '4-layouts/home';
+

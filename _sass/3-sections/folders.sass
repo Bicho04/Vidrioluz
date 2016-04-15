@@ -61,8 +61,14 @@ section.folders
       h3
         background: $color-text
     
+    // &:last-child
+      // @include align-self(flex-start)
     &:nth-child(11),
     &:nth-child(12)
       opacity: 0
+      display: none
       &:hover
         cursor: default
+      @include media($large-screen)
+        display: block
+ 

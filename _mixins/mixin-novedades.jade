@@ -1,0 +1,11 @@
+mixin noticia(img, titulo, parrafos, enlace)
+	article.noticia
+		figure.picture
+			img(src="assets/img/#{img}.png", alt="")
+		.cont-txt
+			h3 #{titulo}
+			p #{parrafos}
+			a(href="novedades-#{enlace}.html") 
+				| leer más
+				i.fa.fa-angle-double-right
+	hr

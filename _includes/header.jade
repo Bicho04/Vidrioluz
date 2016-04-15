@@ -1,28 +1,28 @@
-mixin menu-boton(link, name)
+mixin menu-boton(link, name, clase)
 	li
-		a(href="#{link}.html") #{name}
+		a(href="#{link}.html" class="#{clase}") #{name}
 		block
 
 hr.top
 header
-	a(href="#").header-Logo
+	a(href="index").header-Logo
 		img(src="assets/img/logo-vidrioluz.png", alt="")
 	nav.header-menu
 		ul.nav
 			+menu-boton('index','INICIO')
-			+menu-boton('#','LA EMPRESA')
+			+menu-boton('javascript:void(0)','LA EMPRESA','nav-boton')
 				ul.sub-nav
 					+menu-boton('laEmpresa-vidrioluz','Vidrioluz')
 					//- +menu-boton('laEmpresa-historia','Historia')
 					+menu-boton('laEmpresa-misionVision','Misión-Visión')
-					+menu-boton('#','Grupo humano')
+					+menu-boton('javascript:void(0)','Grupo humano','subnav-boton')
 						ul.subsub-nav
-							+menu-boton('#','Colaboradores')
+							+menu-boton('javascript:void(0)','Colaboradores')
 							+menu-boton('laEmpresa-Trabaja-con-Nosotros','Trabaja con nosotros')
 
-			+menu-boton('#','PRODUCTOS')
+			+menu-boton('javascript:void(0)','PRODUCTOS','nav-boton')
 				ul.sub-nav
-					+menu-boton('productos-vidrios','Vidrios')
+					+menu-boton('productos-vidrios','Vidrios','subnav-boton')
 						ul.subsub-nav
 							+menu-boton('productos-vidriosFlotados',		'Flotados')
 							+menu-boton('productos-vidriosTemplados',		'Templados')

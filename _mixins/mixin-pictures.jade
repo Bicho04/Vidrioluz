@@ -1,16 +1,17 @@
-mixin slide(img)
+mixin slide(carpeta, img)
 	.picture
-		img(src="assets/img/slide/#{img}.jpg" alt="Vidrioluz slide")
-
+		img(src="assets/img/#{carpeta}/#{img}.jpg" alt="Vidrioluz #{carpeta}")
 		
 mixin slide-(carpeta, img, num)
 	.picture
 		img(src="assets/img/vidrios#{carpeta}/#{img}-#{num}.jpg")
-
-
 
 mixin vidrio(img, h3, enlace)
 	a(href="productos-vidrios#{enlace}.html").vidrio.folder
 		figure
 			img(src="assets/img/folders/#{img}.jpg", alt="Vidrioluz - #{h3}")
 		h3 #{h3}
+mixin youtubeVideo(link)
+	.video
+		.video-wrapper
+			iframe(src="https://www.youtube.com/embed/#{link}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen)

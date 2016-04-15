@@ -1,0 +1,13 @@
+mixin aplicacion(tipo, num)
+  -var img= tipo + '-' + num 
+  .modal
+    label(for='modal-#{tipo}-#{num}')
+      .modal-trigger 
+        +slide('aplicaciones', img)
+    input.modal-state(id="modal-#{tipo}-#{num}" type='checkbox') 
+    .modal-fade-screen
+      .modal-inner
+        .modal-close(for='modal-#{tipo}-#{num}')
+          i.fa.fa-times
+        .modal-content
+          +slide('aplicaciones', img)

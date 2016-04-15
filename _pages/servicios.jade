@@ -7,13 +7,40 @@ block title
 block body
 	figure.slide.slide-small
 		.pictures
-			include ../_includes/slide-generico
+			+slide('Servicios', 'Slide-Servicios')
 			
-	section
-		article.cont-text
-			h2  Pulido de bordes
-			p El pulido de los cantos de los vidrios permite una buena instalación y mejor resistencia, además de sacar la mejor imagen de un cristal, dejándolo brillante para tapas de mesas, pesceras, divisorias o aplicaciones con bordes expuestos 
-			h2 Cortes de vidrios
-			p Nuestra estructura productiva cuenta con tecnología, experiencia y un grupo humano actualizado. Podemos ofrecer a nuestros clientes precisión, entrega inmediata y calidad en sus pedidos.
-			h2 Perforaciones
-			p Contamos con las mejores herramientas para acondicionar a los cristales a las más altas exigencias.  
+	section.servicios
+		h2 Servicios
+		article.cont-textImg
+			.content.servicio
+				figure.slide.slide-content.servicio
+					.pictures#pictures
+						+slide('Servicios', 'Pulidodebordes-b1')
+						+slide('Servicios', 'Pulidodebordes-b2')
+					.slide-navs
+				.text
+					h2  Pulido de bordes
+					p El pulido de los cantos de los vidrios permite una buena instalación y mejor resistencia, además de sacar la mejor imagen de un cristal, dejándolo brillante para tapas de mesas, pesceras, divisorias o aplicaciones con bordes expuestos 
+		article.cont-textImg
+			.content.servicio
+				figure.slide.slide-content.servicio
+					.pictures#pictures2
+						+slide('Servicios', 'Cortes-b1')
+						+slide('Servicios', 'Cortes-b2')
+						+slide('Servicios', 'Cortes-b3')
+						+slide('Servicios', 'Cortes-b5')
+					.slide-navs2
+				.text
+					h2 Cortes de vidrios
+					p Nuestra estructura productiva cuenta con tecnología, experiencia y un grupo humano actualizado. Podemos ofrecer a nuestros clientes precisión, entrega inmediata y calidad en sus pedidos.
+		article.cont-textImg
+			.content.servicio
+				figure.slide.slide-content.servicio
+					.pictures#pictures3
+						+slide('Servicios', 'Perforaciones-b1')
+						+slide('Servicios', 'Perforaciones-b2')
+						+slide('Servicios', 'Perforaciones-b3')
+					.slide-navs3
+				.text
+					h2 Perforaciones
+					p Contamos con las mejores herramientas para acondicionar a los cristales a las más altas exigencias.  

@@ -1,4 +1,5 @@
 extends ../_layout/default
+include ../_mixins/mixin-aplicacion
 
 block title
 	title Aplicaciones
@@ -7,15 +8,40 @@ block title
 block body
 	figure.slide.slide-small
 		.pictures
-			include ../_includes/slide-generico
+			+slide('aplicaciones','aplicaciones')
 			
 	section
-		article.cont-text
+		article.cont-galerias
 			h2 Aplicaciones
-			ul
-				li: a(href="productos-vidriosLaminados.html") Laminado
-				li: a(href="productos-vidriosEspejos.html") Espejos
-				li: a(href="productos-vidriosProfilit.html") Profilit
-				li: a(href="productos-vidriosOpacid.html") Opacid
-				li: a(href="productos-vidriosCoverglass.html") Coverglass
+			h3 Coverglass
+			.galeria
+				+aplicacion('Coverglass','1')
+				+aplicacion('Coverglass','2')
+				+aplicacion('Coverglass','3')
+				+aplicacion('Coverglass','4')
+				+aplicacion('Coverglass','5')
+				+aplicacion('Coverglass','6')
+				+aplicacion('Coverglass','7')
+				+aplicacion('Coverglass','8')
+
+			h3 Espejos
+			.galeria
+				+aplicacion('Espejos','1')
+				+aplicacion('Espejos','2')
+				+aplicacion('Espejos','3')
+				+aplicacion('Espejos','4')
+				+aplicacion('Espejos','5')
+				+aplicacion('Espejos','6')
+				+aplicacion('Espejos','7')
+
+			h3 Laminados
+			.galeria
+				+aplicacion('Laminados','1')
+				+aplicacion('Laminados','2')
+				+aplicacion('Laminados','3')
+				+aplicacion('Laminados','4')
+				+aplicacion('Laminados','5')
+				+aplicacion('Laminados','6')
+	
+			
 

@@ -10,13 +10,17 @@ block body
 			+slide-('Gral','Perfiles','1')
 
 	section.vidrios-vidrio
-		article.cont-text
+		article.cont-textImg
 			header
-				h2 Perfiles
-				//- a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				//- figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('Gral','Perfiles','b1')
+						+slide-('Gral','Perfiles','b2')
+					.slide-navs
 				.text
+					h2 Perfiles
 					p Los perfiles de aluminio se constituyen en el medio principal de construcción contemporáneo, sus prestaciones son capaces de suministrar estructura de instalación desde a hogares hasta a las más desafiantes obras de ingeniería o arquitectura moderna. 
 
 

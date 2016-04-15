@@ -40,9 +40,9 @@ body
     // padding-top: em
     text-align: right
     width: 100%
+    padding-right: 0.5em
     i 
       font-size: 1.2em
-      margin-right: 0.3em
     &:hover
       text-decoration:  none
       color: $color-selection
@@ -54,12 +54,8 @@ body
     margin: 0
   .content
     max-width: 95%
+    overflow: hidden
     margin: 0 auto 3em
-    @include media($large-screen) 
-      display: flex
-      max-width: 100%
-      flex-direction: row
-      justify-content: space-between
     h2 
       margin-top: 0
     .text
@@ -85,8 +81,70 @@ body
         width: 100%
         height: 100%
         background: lighten($color-text,55)
+      &.servicio
+        width: 350px
+        height: 350px
     @include media($large-screen) 
+      display: flex
+      max-width: 100%
       flex-direction: row
+      justify-content: space-between
+      &.servicio
+        @include align-items(center)
+        @include justify-content(center)
 
+    
+.cont-galerias
+  padding: 0 1em
+  @include media($large-screen) 
+    padding: 0
+  .galeria
+    @include display(flex)
+    @include flex-wrap(wrap)
+    @include justify-content(center)
+    @include media($large-screen) 
+      @include justify-content(flex-start)
+    .modal-trigger .picture
+      $width: 220px
+      $bd-size: 0.4em
+      $bd-box: $width/6
+      $bd-vertical: -$bd-box/1.6
+      $bd-horizontal: -$bd-box/2
+      width: $width
+      height: $width/1.8
+      overflow: hidden
+      margin: 1em
+      position: relative
+      &:after,
+      &:before
+        background: $color-bg
+        box-sizing: border-box
+        content: ''
+        height: $bd-box
+        position: absolute
+        transform: rotate(-35deg)
+        width: $bd-box
+        z-index: 99
+      &:before
+        top: $bd-vertical
+        left: $bd-horizontal
+      &:after
+        bottom: $bd-vertical
+        right: $bd-horizontal
+      img
+        min-width: 100%
+        height: 100%
 
-
+.video-wrapper 
+  height: 0
+  overflow: hidden
+  padding-bottom: 56.25% 
+  position: relative
+  margin: 0.5em 0
+  iframe .ytp-watermark.yt-uix-sessionlink
+    display: none;
+  embed,
+  object,
+  iframe 
+    @include position(absolute, 0px null null 0px)
+    @include size(100%)

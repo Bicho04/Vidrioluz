@@ -46,8 +46,6 @@ ul.nav
       display: inline-block
     &:hover,
     &:focus
-      ul.sub-nav
-        display: block
       >a
         color: darken($color-primary,30)
         border-color: lighten($color-text,20)
@@ -70,7 +68,7 @@ ul.nav
       text-decoration: none
 
 ul.sub-nav
-  display: block
+  display: none
   padding: 0.5em 0
   @include media($large-screen) 
     text-align: left
@@ -85,9 +83,6 @@ ul.sub-nav
     padding: 0 1em
     display: block
     position: relative
-    &:hover ul.subsub-nav,
-    &:focus ul.subsub-nav
-      display: block
     a 
       border-bottom: 1px solid lighten($color-text,60)
       &:hover
@@ -96,7 +91,7 @@ ul.sub-nav
 
 ul.subsub-nav
   padding: 0.5em 0
-  display: block
+  display: none
   @include media($large-screen)
     position: absolute
     background: rgba(255,255,255,0.8)

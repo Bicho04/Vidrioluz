@@ -1,0 +1,28 @@
+.mapa {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.mapa img { 
+  max-width: none; // to prevent UI control bug
+}
+
+.mapa .content {
+  padding: 0;
+}
+
+.mapa .firstHeading {
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0;
+  color: $color-primary;
+}
+
+.mapa .bodyContent {
+  font-size: 1em;
+  margin: 0;
+  color: #888;
+}

@@ -27,7 +27,7 @@ figure.slide
       &:before
         background: $color-bg
         box-sizing: border-box
-        content: 'O'
+        content: ''
         height: $bd-box
         position: absolute
         transform: rotate(-35deg)
@@ -58,19 +58,25 @@ figure.slide
         size: 50% 
 
 
-  .slide-navs
+  .slide-navs,
+  .slide-navs2,
+  .slide-navs3
     position: absolute
     top: 0
-    right: 0.5em
+    right: 0
     font-size: 3em
+    line-height: 1em
     z-index: 6
+    font-size: 38px
+    text-shadow: 0 1px 1px #333
+    @include media($large-screen) 
+      right: 0.5em
+      font-size: 48px
     .slide_nav
       color: #f1f1f1
-      display: block
       display: inline
-      line-height: 0.5em
-      margin: 0 0.2em
-      padding: 0.2em
+      line-height: 1em
+      margin: 0 0.3em
       &:after
         font: normal normal normal 14px/1 FontAwesome
         font-size: inherit
@@ -112,3 +118,9 @@ figure.slide
         margin: 0
         padding: 0
         display: block
+    &.servicio
+      .pictures
+        width: 350px 
+        height: 350px
+        img 
+          height: 350px

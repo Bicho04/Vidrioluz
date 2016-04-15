@@ -1,5 +1,8 @@
 section.contactos
 	margin-bottom: 3em
+	padding: 0 1em
+	@include media($large-screen) 
+		padding: 0
 	h2
 		margin: 1em 0 1em
 	.contacto
@@ -8,6 +11,7 @@ section.contactos
 		display: inline-block
 		vertical-align: top
 		font-size: 0.9em
+
 		i 
 			margin-right: 0.5em
 		h4
@@ -40,6 +44,7 @@ section.contactos
 			background: $color-primary
 			color: white
 			padding: 0.5em 1.5em
-	#map
+	#mapa
 		width: 100%
 		height: 400px
+		background: pink

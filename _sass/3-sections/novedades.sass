@@ -1,13 +1,13 @@
 section.novedades
 	margin: 2em 0
 	figure
-		margin: 0.5em 1em 0.5em 0
+		margin: 0 1em 0.5em 0
 		display: inline-block
 		width: 200px
 		height: 200px
 		background: #eee
-		float: left
 		position: relative
+		vertical-align: top
 		&:after
 			content: ''
 			position: absolute
@@ -30,6 +30,10 @@ section.novedades
 	img
 		width: 100%
 		margin-top: 4.5em
+	.cont-txt
+		display: inline-block
+		vertical-align: top
+		max-width: calc(100% - 220px)
 	h2 
 		margin: 0 0 1em
 		padding: 0
@@ -44,7 +48,7 @@ section.novedades
 	hr
 		border-style: dashed
 		border-color: $color-text
-		margin: 3.5em 0 2em
+		margin: 2em 0
 		&:last-child
 			hr 
 				display: none

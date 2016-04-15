@@ -10,13 +10,18 @@ block body
 			+slide-('Gral','Herrajes','1')
 
 	section.vidrios-vidrio
-		article.cont-text
+		article.cont-textImg
 			header
-				h2 Herrajes
-				//- a.atras(href="productos-vidrios") « VOLVER A PRODUCTOS
+				include ../_includes/volver
 			.content
-				//- figure: img(src="http://loremflickr.com/300/350/glasses", alt="")
+				figure.slide.slide-content
+					.pictures#pictures
+						+slide-('Gral','Herrajes-lat','1')
+						+slide-('Gral','Herrajes-lat','2')
+						+slide-('Gral','Herrajes-lat','3')
+					.slide-navs
 				.text
+					h2 Herrajes
 					p Es la fuerza que complementa, distingue y hace posible la instalación de vidrios. Tenemos una amplia variedad de soluciones e innovaciones para darle valor a su obra.
 
 

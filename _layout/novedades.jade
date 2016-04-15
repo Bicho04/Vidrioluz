@@ -1,0 +1,44 @@
+doctype html
+html(lang='Es-Py')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+		block title
+			title novedades
+			meta(name='description', content='#####')
+
+		meta(name='autor', content='Fincreativo')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='assets/css/main.css')
+
+	body
+		<!--[if lt IE 8]>
+		p.browserupgrade.
+			Estas usando un nevegador <strong>viejo</strong>.
+			Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
+		<![endif]-->
+
+		.wrapper
+			include ../_mixins/mixin-pictures
+			include ../_includes/header
+
+			section.novedades
+				article.cont-textImg
+					//- header
+						//- include ../_includes/volver-novedades
+					.content
+						figure.slide.slide-content
+							.pictures
+								block pictures
+									//- +slide-('Impresos','lat','1')
+							.slide-navs
+						.text
+							block text
+								h2 titulo
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolore aliquid quasi nesciunt doloribus harum deserunt laborum, cumque magnam tenetur veritatis itaque accusamus omnis unde ullam corrupti praesentium aspernatur! Quidem.
+						
+			include ../_includes/footer
+		
+		
+		include ../_includes/script
